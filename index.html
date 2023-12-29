@@ -3,72 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>S.V.S.Saranya - Portfolio</title>
+    <title>New Year Wishes For Friends And Family Members</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #4285f4, #34a853, #fbbc05, #ea4335);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #wish-container {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid grey;
+            border-radius: 70px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out, rotate 5s ease-in-out;
+            animation-iteration-count: 1;
+            height: 45rem;
+            width: 33rem ;
+        }
+
+        #countdown {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        #message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+            text-shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 42px;
+            margin-bottom: 10px;
+            animation: scale 2s infinite, colorChange 6s infinite alternate;
+        }
+
+        .newyear-image img{
+            height: 9rem;
+            width: 15rem;
+            border:1px solid gray;
+            border-radius: 80px;
+            box-shadow:2px 2px gray;
+
+        }
+
+        h3{
+            color: deeppink;
+        }
+
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes rotate {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(2); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes colorChange {
+            0% { color: #333; }
+            25% { color: #4285f4; }
+            50% { color: #34a853; }
+            75% { color: #fbbc05; }
+            100% { color: #ea4335; }
+        }
+
+  /* Media Queries for Responsive Design */
+  @media only screen and (max-width: 600px) {
+            #wish-container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            #countdown {
+                font-size: 24px;
+            }
+
+            #message {
+                font-size: 16px;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="wish-container">
+        <h1>&#129395;Happy New Year!&#129395;</h1>
 
-    <header>
-        <img src="profile-picture.jpg" alt="Your Profile Picture">
-        <div class="header-content">
-            <h1>Your Name</h1>
-            <p>Web Developer</p>
-        </div>
-    </header>
+        <div class="newyear-image"><img src="https://cdn.pixabay.com/photo/2023/12/19/11/38/goals-8457555_1280.png" alt="New Year Image"></div>
+        
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am a passionate web developer with a focus on creating interactive and user-friendly websites.</p>
-    </section>
+        <h3><i class="fa-solid fa-angles-left"></i>Countdown to Start the NewYear<i class="fa-solid fa-angles-right"></i></h3>
+        <div id="countdown"></div>
+        <p id="message">&#x1f389;  "May this New Year bring you joy, laughter, and incredible moments of happiness. May you find success in your endeavors and embrace new opportunities with open arms. May the coming year be filled with love, good health, and prosperity. Wishing you a Happy New Year full of endless possibilities and beautiful moments!..✨"   &#x1f389;</p>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
+        <h4 style="color: #ea4335;">From:-</h4>
+        <h2 style="color: rgb(0, 110, 255); text-decoration: underline solid greenyellow; text-shadow: 2px 2px black;">S.V.S.Saranya</h2>
+    </div>
+       
+    <script>
+        // Set the date we're counting down to
+        const countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for anchor links
-    const navLinks = document.querySelectorAll('.nav-link');
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetElement.offsetTop - 60, // Adjust the offset as needed
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-
-</script>
-
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Happy New Year!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
